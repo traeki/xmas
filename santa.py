@@ -32,7 +32,7 @@ def main():
       help='File containing the template email.')
   parser.add_argument(
       'secret_log', type=argparse.FileType('w'),
-      help='File containing the secret assignments. SPOILER ALERT.')
+      help='File in which to place the secret assignments. SPOILER ALERT.')
   args = parser.parse_args()
   participants = parse_data(args.data_file)
   santa_pairs = assign_santas(participants, args.secret_log)
